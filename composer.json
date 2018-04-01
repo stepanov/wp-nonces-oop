@@ -1,5 +1,5 @@
 {
-    "name": "WP Nonces OOP",
+    "name": "stepanov/wp-nonces-oop",
     "description": "OOP implementation of WP Nonces",
     "keywords": ["wordpress", "oop", "nonces"],
     "license": "MIT",
