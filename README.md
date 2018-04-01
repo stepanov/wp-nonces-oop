@@ -1,11 +1,32 @@
-Generate WP nonces 
+# OOP WP Nonces Generator
 
-Installation
+## About
 
-composer install
+Generates WP nonces in OOP manner 
 
-Usage
+## Installation
 
+### Composer
+
+Install generator globally:
+
+```
+composer global require "stepanov/wp-nonces-oop=*"
+```
+
+To add to your project:
+
+```
+{
+    "require": {
+        "stepanov/wp-nonces-oop": "1.*"
+    }
+}
+```
+
+## Usage
+
+```
 $nonce = new WpNonces();
 
 $urlNonce = $nonce->createNonceUrl([
@@ -20,3 +41,4 @@ $plainNonce = $nonce->createNoncePlain([
 $fieldNonce = $nonce->createNonceField([
     'action' => 'some_action'
 ]);
+```
