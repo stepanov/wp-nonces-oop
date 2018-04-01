@@ -2,6 +2,8 @@
 
 namespace WpNoncesOop; 
 
+use Exception;
+
 /**
  * class WpNonces
  *
@@ -12,8 +14,7 @@ namespace WpNoncesOop;
 class WpNonces
 {
     const TYPES_DIR = 'Types';
-    const TYPES_PREFIX = 'build';
-    const TYPES_POSTFIX = 'Nonce';
+    const TYPES_POSTFIX = 'WpNonce';
     const TYPES_INTERFACE = 'WpNoncesInterface';
     
     /**
@@ -33,9 +34,9 @@ class WpNonces
      * @param array $params with data to build filed nonce
      * @param string
      */
-    public function createNonceField($params=[])
+    public function createNonceField($params = [])
     {
-        return $this->createNonceField('field', $params);
+        return $this->createNonce('field', $params);
     }
     
     /**
@@ -44,7 +45,7 @@ class WpNonces
      * @param array $params with data to build plain nonce
      * @param string
      */
-    public function createNoncePlain($params[])
+    public function createNoncePlain($params = [])
     {
         return $this->createNonce('plain', $params);
     }
@@ -60,7 +61,7 @@ class WpNonces
     protected function createNonce($type, $params)
     {
         $className = '\\' . __NAMESPACE__ . '\\' . static::TYPES_DIR . '\\' . ucfirst($type) . static::TYPES_POSTFIX;
-        interface = '\\' . __NAMESPACE__ . '\\' . static::TYPES_INTERFACE;
+        $interface = __NAMESPACE__ . '\\' . static::TYPES_INTERFACE;
 
         if (class_exists($className) && in_array($interface, class_implements($className))) {
             $nonce = new $className($params);
@@ -68,6 +69,6 @@ class WpNonces
             return $nonce->generate();
         }
 
-        throw new Exception("Missing implementation for nonce type $type!");
+        throw new Exception("Missing implementation for nonce type $type --> $className; $interface!");
     }
 }

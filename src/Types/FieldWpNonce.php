@@ -2,8 +2,10 @@
 
 namespace WpNoncesOop\Types;
 
+use WpNoncesOop\WpNoncesBaseClass;
+
 /**
- * FielldWpNonce class
+ * FieldWpNonce class
  *
  * implements logic to build nonce for given action
  *
@@ -18,6 +20,6 @@ class FieldWpNonce extends WpNoncesBaseClass
     public function generate()
     {
         // TODO: add here actual implementation to generate nonce for given field
-        return $this->action;
+        return md5($this->action);
     }
 }

@@ -2,6 +2,8 @@
 
 namespace WpNoncesOop\Types;
 
+use WpNoncesOop\WpNoncesBaseClass;
+
 /**
  * UrlWpNonce class
  *
@@ -13,7 +15,7 @@ class UrlWpNonce extends WpNoncesBaseClass
     /**
      * @var $url
      */
-    private = $url;
+    protected $url = null;
     
     /**
      * __construct method
@@ -41,6 +43,6 @@ class UrlWpNonce extends WpNoncesBaseClass
     public function generate()
     {
         // TODO: add here actual implementation: action + url
-        return $this->url . $this->action;
+        return md5($this->url . $this->action);
     }
 }

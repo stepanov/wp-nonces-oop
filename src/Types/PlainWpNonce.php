@@ -2,6 +2,8 @@
 
 namespace WpNoncesOop\Types;
 
+use WpNoncesOop\WpNoncesBaseClass;
+
 /**
  * PlaindWpNonce class
  *
@@ -18,6 +20,6 @@ class PlainWpNonce extends WpNoncesBaseClass
     public function generate()
     {
         // TODO: add here actual implementation to generate nonce for given action
-        return $this->
+        return md5($this->action);
     }
 }

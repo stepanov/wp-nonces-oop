@@ -1,6 +1,8 @@
 <?php
 
-namespace WpNonces;
+namespace WpNoncesOop;
+
+use WpNoncesOop\WpNoncesInterface;
 
 /**
  * WpNoncesBaseClass class
@@ -13,7 +15,7 @@ abstract class WpNoncesBaseClass implements WpNoncesInterface
     /**
      * @var $action
      */
-    private $action = null;
+    protected $action = null;
     
     /**
      * __construct method
@@ -36,5 +38,5 @@ abstract class WpNoncesBaseClass implements WpNoncesInterface
      *
      * @return string
      */
-    abstract public generate();
+    abstract public function generate();
 }
