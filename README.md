@@ -4,6 +4,7 @@
 
 Generates WP nonces in OOP manner 
 
+
 ## Installation
 
 ### Composer
