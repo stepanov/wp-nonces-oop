@@ -23,6 +23,11 @@
             "php": "5.6"
         }
     },
+    "autoload": {
+        "psr-4": { 
+            "WpNoncesOop\\" : "src/" 
+        }
+    },
     "require-dev": {
         "phpunit/phpunit": "*"
     }
