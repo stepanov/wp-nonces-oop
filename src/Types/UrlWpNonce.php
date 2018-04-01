@@ -22,7 +22,7 @@ class UrlWpNonce extends WpNoncesBaseClass
      *
      * @param array $params to build Url nonce
      * @return void
-     * @throws Exception in case of missing mandaory parameter 
+     * @throws Exception in case of missing mandaory parameter
      */
     public function __construct($params = [])
     {

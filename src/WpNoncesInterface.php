@@ -11,7 +11,7 @@ interface WpNoncesInterface
 {
     /**
      * generate method
-     * 
+     *
      * @return string
      */
     public function generate();

@@ -22,7 +22,7 @@ abstract class WpNoncesBaseClass implements WpNoncesInterface
      *
      * @param array $params to build nonce
      * @return void
-     * @throws Exception in case of missing mandatory parameter 
+     * @throws Exception in case of missing mandatory parameter
      */
     public function __construct($params)
     {

@@ -1,6 +1,6 @@
 <?php
 
-namespace WpNoncesOop; 
+namespace WpNoncesOop;
 
 use Exception;
 
@@ -8,7 +8,7 @@ use Exception;
  * class WpNonces
  *
  * Implements functionlity to build nonce with specified type
- * 
+ *
  * @author: Michael Stepanov <stepanov.michael@gmail.com>
  */
 class WpNonces
@@ -23,7 +23,7 @@ class WpNonces
      * @param array $params with data to build URL nonce
      * @param string
      */
-    public function createNonceUrl($params=[])
+    public function createNonceUrl($params = [])
     {
         return $this->createNonce('url', $params);
     }
