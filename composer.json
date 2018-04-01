@@ -1,0 +1,29 @@
+{
+    "name": "WP Nonces OOP",
+    "description": "OOP implementation of WP Nonces",
+    "keywords": ["wordpress", "oop", "nonces"],
+    "license": "MIT",
+    "homepage": "http://stepanoff.org",
+    "authors": [
+        {
+            "name": "Michael Stepanov",
+            "email": "stepanov.michael@gmail.com",
+            "homepage": "http://stepanoff.org",
+            "role": "Developer"
+        }
+    ],
+    "support": {
+        "issues": "http://example.com",
+        "source": "http://example.com"
+    },
+    "config": {
+        "sort-packages": true,
+        "optimize-autoloader": true,
+        "platform": {
+            "php": "5.6"
+        }
+    },
+    "require-dev": {
+        "phpunit/phpunit": "*"
+    }
+}
